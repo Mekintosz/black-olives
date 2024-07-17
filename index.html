@@ -10,22 +10,22 @@
 </head>
 
 <body>
-  <header class="header">
+  <header id="home" class="header">
     <div class="header__group">
       <picture>
         <source>
         <img class="header__logo logo--horizontal" src="./assets/logo-horizontal.svg"
           alt="logo Black Olives, two black olives silhouette">
       </picture>
-      <button class="header__btn__menu"><img src="./assets/menu.svg" alt=""></button>
+      <button id="menu-button" class="header__btn__menu"><img src="./assets/menu.svg" alt=""></button>
     </div>
     <nav class="header__nav">
       <ul>
-        <li class="nav__link"><a href="#">Home</a></li>
-        <li class="nav__link"><a href="#">About us</a></li>
-        <li class="nav__link"><a href="#">Menu</a></li>
-        <li class="nav__link"><a href="#">Our chef</a></li>
-        <li class="nav__link"><a href="#">Location</a></li>
+        <li class="nav__link"><a href="#home">Home</a></li>
+        <li class="nav__link"><a href="#about-us">About us</a></li>
+        <li class="nav__link"><a href="#menu">Menu</a></li>
+        <li class="nav__link"><a href="#our-chef">Our chef</a></li>
+        <li class="nav__link"><a href="#location">Location</a></li>
         <li class="nav__link"><a href="#"></a><button class="nav__btn">Book a table</button></a></li>
       </ul>
     </nav>
@@ -36,7 +36,7 @@
       </picture>
     </div>
   </header>
-  <section class="section">
+  <section id="about-us" class="section">
     <div class="section__container">
       <img class="section__img img__about-us" src="./assets/olive-tree.jpg" alt="olive tree">
       <div>
@@ -51,7 +51,7 @@
       </div>
     </div>
   </section>
-  <section class="section section--bg-grey">
+  <section id="our-chef" class="section section--bg-grey">
     <div class="section__container">
       <div>
         <h2 class="section__title">Chef Johson Oshimota</h2>
@@ -74,7 +74,7 @@
     </div>
   </section>
   <section class="section section--bg-grey">
-    <div class="section__container">
+    <div class="section__container section_container_facilities">
       <img  class="section__img section__img--dining" src="./assets/dining.jpg" alt="restaurant room">
       <div>
         <h3 class="section__title section__title--smaller">Dining room</h3>
@@ -86,10 +86,10 @@
         <p>The bar is full of delicious beers and wines. We have sparkling champagne and smooth rice vodka in stock.
           Delightful cocktails will make you happy.</p>
       </div>
-      <img  class="section__img" src="./assets/bar.jpg" alt="cosy bar">
+      <img  class="section__img section__img--dining" src="./assets/bar.jpg" alt="cosy bar">
     </div>
   </section>
-  <section class="section section--bg-green">
+  <section id="location" class="section section--bg-green">
     <div class="section__container">
       <div>
         <h3 class="section__title section__title--smaler">Directions and contact</h3>
@@ -110,25 +110,24 @@
     </div>
   </section>
   <footer class="footer section section--bg-green">
-    <div class="section__container ">
+    <div class="section__container section__container--footer">
       <picture class="footer__section__picture">
         <source>
         <img class="footer__section__picture__img" src="./assets/logo-vertical.svg" alt="Black Olives logo">
       </picture>
-      <button class="nav__btn nav__btn--footer">Book a table</button>
-      <nav class="nav__footer"> 
-        <ul class="footer__ul">
-          <li><a class="nav__link nav__link--footer" href="#">Home</a></li>
-          <li><a class="nav__link nav__link--footer" href="#">About us</a></li>
-          <li><a class="nav__link nav__link--footer" href="#">Menu</a></li>
-          <li><a class="nav__link nav__link--footer" href="#">Our chef</a></li>
-          <li><a class="nav__link nav__link--footer" href="#">Location</a></li>
-        </ul>
-      </nav>
-      
-      <p class="address footer__address">16 Oxford Street
-        London W1C 2DT
-        United Kingdom</p>
+      <div class="footer__section--details">
+        <button class="nav__btn nav__btn--footer">Book a table</button>
+        <nav class="nav__footer"> 
+          <ul class="footer__ul">
+              <li class="nav__link"><a href="#home">Home</a></li>
+              <li class="nav__link"><a href="#about-us">About us</a></li>
+              <li class="nav__link"><a href="#menu">Menu</a></li>
+              <li class="nav__link"><a href="#our-chef">Our chef</a></li>
+              <li class="nav__link"><a href="#location">Location</a></li>
+          </ul>
+        </nav>
+        <p class="address footer__address">16 Oxford Street, London W1C 2DT, United Kingdom</p>
+      </div>      
     </div>
   </footer>
 </body>

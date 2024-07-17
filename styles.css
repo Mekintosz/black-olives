@@ -85,10 +85,6 @@ a {
     height: 100vh;
 }
 
-.header__nav {
-    /* display: none; */
-}
-
 .header__group {
     display: flex;
     justify-content: space-between;
@@ -111,7 +107,8 @@ a {
     display: none;  
 }
 
-.header__nav:active { margin-top: 2.4rem;
+.header__nav.active { 
+  margin-top: 2.4rem;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -210,9 +207,9 @@ a {
 
 .footer__ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  
+  column-gap: 32px;
 }
 
 .nav__link--footer {
@@ -235,6 +232,11 @@ a {
   height: 100%;
 }
 
+.footer__address {
+  padding: 2rem 0 0 0;
+  text-align: center;
+}
+
 .subscribe__btn {
   font-size: 1.4rem;
 }
@@ -251,7 +253,6 @@ a {
   .section__subscribe__container {
     flex-direction: row;
     align-items: center;
-    
   }
 
   .subscribe__btn {
@@ -259,7 +260,42 @@ a {
     font-size: 1.4rem;
     text-align: center;
     min-width: 30%;
+  }
 
+  .section__img--dining {
+    padding-bottom: 0;
+  }
+  .header__group {
+    height: auto;
+  }
+
+  .section__container--footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+    overflow: hidden;
+  }
+
+  .footer__section__picture {
+    width: 20%;
+  }
+
+  .footer__section__picture__img {
+    width: 100%;
+  }
+
+  .footer__section--details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .footer__address {
+    padding: 0;
+  }
+  .nav__btn--footer {
+    margin: 0;
   }
 }
 
@@ -275,6 +311,68 @@ a {
 .section__img {
   width: 45%;
 
+}
+
+.section__subscribe__container {
+  flex-direction: column;
+}
+
+.section_container_facilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section__img--dining {
+  width: 100%;
+}
+
+.header__img {
+  height: 100vh;
+  overflow: hidden;
+  scale: 130%;
+}
+
+.header__nav {
+  grid-area: navi;
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.header__img__container {
+  grid-area: img;
+}
+
+.header {
+  display: grid;  
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "logo img"
+  "navi img";
+}
+
+
+
+.header__btn__menu {
+  display: none;
+}
+
+.section__container {
+  max-width: 1440px;
+}
+
+.section__container--footer {
+  width: 100%;
+  height: auto;
+}
+
+.section__container--footer.section__container {
+  margin: 0;
 }
 }
 
