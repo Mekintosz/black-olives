@@ -2,7 +2,7 @@
 
 https://mekintosz.github.io/black-olives/
 
-<img width="1920" height="3926" alt="screencapture-mekintosz-github-io-landing-page-02-2025-07-31-11_53_34" src="https://github.com/user-attachments/assets/2be611e1-35b3-4f21-893a-65dbaff25fb0" />
+<img width="1920" height="6288" alt="screencapture-mekintosz-github-io-black-olives-2025-07-31-12_01_46" src="https://github.com/user-attachments/assets/ddf5c63c-3077-4eee-9805-cb9e5163406c" />
 
 Photo credits:
 jay-wennington-N_Y88TWmGwA-unsplash - header
