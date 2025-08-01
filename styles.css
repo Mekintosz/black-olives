@@ -100,7 +100,7 @@ a {
 
 .header__logo {
     padding: 0.9rem;
-    max-width: 260px;
+    max-width: 320px;
 }
 
 .header__nav {
@@ -198,7 +198,7 @@ a {
 }
 
 .section__img {
-
+flex-shrink: 0;
 }
 
 .section__img--no-padding {
@@ -308,6 +308,7 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+
 .section__img {
   width: 45%;
 
@@ -340,6 +341,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: var(--menu-font-size);
   
 }
 
@@ -356,7 +358,10 @@ a {
   "navi img";
 }
 
-
+.header__logo {
+  margin: 4rem auto;
+  justify-self: center;
+}
 
 .header__btn__menu {
   display: none;
@@ -372,10 +377,20 @@ a {
 }
 
 .section__container--footer.section__container {
-  margin: 0;
+  
+}
+
+.footer__section--details {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.nav__btn--footer {
+  max-width: 38vw;
+  margin: var(--title-font-size);
+  align-self: center;
 }
 }
-
-
-
-
