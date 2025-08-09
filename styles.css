@@ -272,9 +272,10 @@ a {
   display: grid;
 }
 
-.form__container-2 {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
+/* .header__bg__img {
+  width: 100%;
+  position: absolute;
+  top: 0;
 } */
 
 @media (min-width: 600px) {

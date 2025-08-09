@@ -10,6 +10,11 @@
 
   <body>
     <header id="home" class="header">
+      <!-- <img
+        class="header__bg__img"
+        src="./assets/olive-branch.svg"
+        alt="olive tree branch"
+      /> -->
       <div class="header__group">
         <picture>
           <source />
@@ -69,10 +74,16 @@
               </div>
               <div class="input-container">
                 <label for="sittings">Nomber of sittings</label>
-                <input type="range" name="sittings" id="sittings" />
+                <input
+                  type="number"
+                  name="sittings"
+                  id="sittings"
+                  min="1"
+                  max="12"
+                  required
+                />
               </div>
             </div>
-
             <input
               class="nav__btn nav__btn--footer"
               type="submit"
@@ -94,15 +105,6 @@
           />
         </picture>
         <div class="footer__section--details">
-          <nav class="nav__footer">
-            <ul class="footer__ul">
-              <li class="nav__link"><a href="#home">Home</a></li>
-              <li class="nav__link"><a href="#about-us">About us</a></li>
-              <li class="nav__link"><a href="#menu">Menu</a></li>
-              <li class="nav__link"><a href="#our-chef">Our chef</a></li>
-              <li class="nav__link"><a href="#location">Location</a></li>
-            </ul>
-          </nav>
           <p class="address footer__address">
             16 Oxford Street, London W1C 2DT, United Kingdom
           </p>
