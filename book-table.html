@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Olives</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header id="home" class="header">
+      <div class="header__group">
+        <picture>
+          <source />
+          <img
+            class="header__logo logo--horizontal"
+            src="./assets/logo-horizontal.svg"
+            alt="logo Black Olives, two black olives silhouette"
+          />
+        </picture>
+        <button id="menu-button" class="header__btn__menu">
+          <img src="./assets/menu.svg" alt="" />
+        </button>
+      </div>
+      <nav class="header__nav book-table__nav">
+        <ul>
+          <li class="nav__link"><a href="index.html#home">Home</a></li>
+          <li class="nav__link"><a href="index.html#about-us">About us</a></li>
+          <li class="nav__link"><a href="index.html#menu">Menu</a></li>
+          <li class="nav__link"><a href="index.html#our-chef">Our chef</a></li>
+          <li class="nav__link"><a href="index.html#location">Location</a></li>
+        </ul>
+      </nav>
+      <div class="header__img__container">
+        <section class="">
+          <form class="booking-form" action="">
+            <div>
+              <div class="input-container">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="input-container">
+                <label for="tel">Telephone</label>
+                <input type="tel" name="tel" id="tel" required />
+              </div>
+              <div class="input-container">
+                <label for="emeil">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+            </div>
+            <div class="form__container-2">
+              <div class="input-container">
+                <label for="dete">Date</label>
+                <input type="date" name="date" id="date" required />
+              </div>
+              <div class="input-container">
+                <label for="time">Time</label>
+                <input type="time" name="time" id="time" required />
+              </div>
+              <div class="input-container">
+                <label for="room-choice">Choose dining place</label>
+                <input list="rooms" id="room-choice" name="room-choice" />
+                <datalist id="rooms">
+                  <option value="Dining room"></option>
+                  <option value="Patio (only summer)"></option>
+                  <option value="Bar"></option>
+                </datalist>
+              </div>
+              <div class="input-container">
+                <label for="sittings">Nomber of sittings</label>
+                <input type="range" name="sittings" id="sittings" />
+              </div>
+            </div>
+
+            <input
+              class="nav__btn nav__btn--footer"
+              type="submit"
+              id="submit"
+            />
+          </form>
+        </section>
+      </div>
+    </header>
+
+    <footer class="footer section section--bg-green">
+      <div class="section__container section__container--footer">
+        <picture class="footer__section__picture">
+          <source />
+          <img
+            class="footer__section__picture__img"
+            src="./assets/logo-vertical.svg"
+            alt="Black Olives logo"
+          />
+        </picture>
+        <div class="footer__section--details">
+          <nav class="nav__footer">
+            <ul class="footer__ul">
+              <li class="nav__link"><a href="#home">Home</a></li>
+              <li class="nav__link"><a href="#about-us">About us</a></li>
+              <li class="nav__link"><a href="#menu">Menu</a></li>
+              <li class="nav__link"><a href="#our-chef">Our chef</a></li>
+              <li class="nav__link"><a href="#location">Location</a></li>
+            </ul>
+          </nav>
+          <p class="address footer__address">
+            16 Oxford Street, London W1C 2DT, United Kingdom
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

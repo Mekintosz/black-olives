@@ -20,6 +20,7 @@
   --title-font-size: 2.5rem;
   --title-font-size-smaller: 2.2rem;
   --medium-font-weight: 400;
+  --shadow-item: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 body {
@@ -100,7 +101,7 @@ a {
 
 .header__logo {
   padding: 0.9rem;
-  max-width: 320px;
+  width: 80%;
 }
 
 .header__nav {
@@ -171,17 +172,13 @@ a {
   font-size: var(--title-font-size-smaller);
 }
 
-.img__about-us {
-  margin-bottom: 2rem;
-}
-
 .section__contact__email {
   font-size: 7vw;
   font-style: italic;
 }
 
 .section_contact_img {
-  height: 45vw;
+  height: 75vw;
   z-index: 0;
   position: absolute;
   left: 30vw;
@@ -200,6 +197,7 @@ a {
 .section__img {
   flex-shrink: 0;
   margin: 0 -1rem;
+  box-shadow: var(--shadow-item);
 }
 
 .section__img--no-padding {
@@ -208,6 +206,10 @@ a {
 
 .section__location__img {
   height: 70vh;
+}
+
+.img__about-us {
+  margin-bottom: 2rem;
 }
 
 .footer__ul {
@@ -251,8 +253,29 @@ a {
 }
 
 .section__img--dining {
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
+
+.header__nav .book-table__nav {
+  flex-direction: row;
+}
+
+.booking-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  margin: 1rem;
+  display: grid;
+}
+
+.form__container-2 {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
 
 @media (min-width: 600px) {
   .section__subscribe__container {
@@ -270,8 +293,13 @@ a {
   .section__img--dining {
     padding-bottom: 0;
   }
+
   .header__group {
     height: auto;
+  }
+
+  .header__logo {
+    width: 100%;
   }
 
   .section__container--footer {
@@ -304,6 +332,10 @@ a {
   .nav__btn--footer {
     margin: 0;
   }
+
+  .section_contact_img {
+    height: 70vh;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -320,6 +352,7 @@ a {
     width: 45%;
     margin: 0;
   }
+
   .section__location__img {
     width: 60%;
   }
