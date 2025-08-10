@@ -227,7 +227,7 @@ a {
 
 .nav__btn--footer {
   width: 100%;
-  margin: 2rem 0;
+  margin: 2rem auto;
 }
 
 .footer__section__picture {
@@ -279,6 +279,21 @@ a {
   padding: 1rem;
 }
 
+.form__olive-branch {
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  height: 100%;
+  z-index: -1;
+}
+
+.foot-note {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
 @media (min-width: 600px) {
   .section__subscribe__container {
     flex-direction: row;
@@ -328,6 +343,11 @@ a {
 
   .nav__btn--footer {
     margin: 0;
+  }
+
+  .footer__btn__link {
+    display: flex;
+    justify-content: center;
   }
 
   .section_contact_img {
@@ -468,5 +488,20 @@ a {
 
   .section__contact__email {
     font-size: 6vw;
+  }
+
+  .form__olive-branch {
+    scale: 120%;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+
+  .nav__link--footer {
+    padding: 0;
+    margin: 0;
   }
 }
