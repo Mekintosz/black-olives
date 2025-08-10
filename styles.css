@@ -101,7 +101,7 @@ a {
 
 .header__logo {
   padding: 0.9rem;
-  width: 80%;
+  max-width: 280px;
 }
 
 .header__nav {
@@ -123,6 +123,8 @@ a {
 }
 
 .nav__btn {
+  font-family: "Libre Caslon Text", serif;
+  font-size: 1rem;
   padding: 0.3rem 2.6rem;
   margin-bottom: 2.4rem;
   background-color: var(--primary-yellow);
@@ -173,7 +175,7 @@ a {
 }
 
 .section__contact__email {
-  font-size: 7vw;
+  font-size: 8vw;
   font-style: italic;
 }
 
@@ -181,7 +183,7 @@ a {
   height: 75vw;
   z-index: 0;
   position: absolute;
-  left: 30vw;
+  left: 20vw;
 }
 
 .section__contact__container {
@@ -191,7 +193,7 @@ a {
 }
 
 .section__contact__title {
-  font-size: 3vw;
+  font-size: 6vw;
 }
 
 .section__img {
@@ -220,14 +222,12 @@ a {
 }
 
 .nav__link--footer {
-  font-size: 1.4rem;
-  padding: 1.6rem 0;
+  font-size: 1.2rem;
 }
 
 .nav__btn--footer {
   width: 100%;
   margin: 2rem 0;
-  font-size: 1.4rem;
 }
 
 .footer__section__picture {
@@ -242,10 +242,7 @@ a {
 .footer__address {
   padding: 2rem 0 0 0;
   text-align: center;
-}
-
-.subscribe__btn {
-  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
 .section__subscribe__container {
@@ -272,11 +269,15 @@ a {
   display: grid;
 }
 
-/* .header__bg__img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-} */
+.section__form {
+  display: flex;
+  align-items: end;
+  height: 100%;
+}
+
+.header__form {
+  padding: 1rem;
+}
 
 @media (min-width: 600px) {
   .section__subscribe__container {
@@ -286,7 +287,6 @@ a {
 
   .subscribe__btn {
     margin: 0;
-    font-size: 1.4rem;
     text-align: center;
     min-width: 30%;
   }
@@ -297,10 +297,6 @@ a {
 
   .header__group {
     height: auto;
-  }
-
-  .header__logo {
-    width: 100%;
   }
 
   .section__container--footer {
@@ -337,9 +333,38 @@ a {
   .section_contact_img {
     height: 70vh;
   }
+
+  .footer__logo {
+    display: flex;
+  }
+
+  .footer__section__picture {
+    display: flex;
+    height: 100%;
+    width: 30%;
+    align-items: end;
+  }
+  .footer__section__picture__img {
+    align-items: end;
+  }
+
+  .footer__address {
+    font-size: 1rem;
+    margin: 0 0 0 0.4rem;
+    text-align: start;
+    align-self: end;
+  }
+
+  .nav__btn--footer {
+    max-width: 300px;
+    align-self: center;
+  }
 }
 
 @media (min-width: 1000px) {
+  .header__logo {
+    max-width: 340px;
+  }
   .section__container {
     font-size: 1.6rem;
     padding: 6rem 4rem;
@@ -360,6 +385,11 @@ a {
 
   .section_contact_img {
     height: 70vh;
+    left: 30vw;
+  }
+
+  .section__contact__container {
+    justify-content: center;
   }
 
   .section__subscribe__container {
@@ -398,7 +428,7 @@ a {
 
   .header {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 2fr 7fr;
     grid-template-rows: auto;
     grid-template-areas:
       "logo img"
@@ -421,6 +451,7 @@ a {
   .section__container--footer {
     width: 100%;
     height: auto;
+    align-content: end;
   }
 
   .footer__section--details {
@@ -431,9 +462,11 @@ a {
     gap: 3rem;
   }
 
-  .nav__btn--footer {
-    max-width: 26vw;
-    margin: var(--title-font-size);
-    align-self: center;
+  .section__contact__title {
+    font-size: 4vw;
+  }
+
+  .section__contact__email {
+    font-size: 6vw;
   }
 }

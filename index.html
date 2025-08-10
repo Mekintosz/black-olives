@@ -11,14 +11,12 @@
   <body>
     <header id="home" class="header">
       <div class="header__group">
-        <picture>
-          <source />
-          <img
-            class="header__logo logo--horizontal"
-            src="./assets/logo-horizontal.svg"
-            alt="logo Black Olives, two black olives silhouette"
-          />
-        </picture>
+        <img
+          class="header__logo logo--horizontal"
+          src="./assets/logo-horizontal.svg"
+          alt="logo Black Olives, two black olives silhouette"
+        />
+
         <button id="menu-button" class="header__btn__menu">
           <img src="./assets/menu.svg" alt="" />
         </button>
@@ -32,7 +30,7 @@
           <li class="nav__link"><a href="#location">Location</a></li>
           <li class="nav__link">
             <a href="book-table.html" target="_blank"
-              ><button class="nav__btn">Book a table</button></a
+              ><button class="nav__btn">BOOK A TABLE</button></a
             >
           </li>
         </ul>
@@ -104,7 +102,7 @@
             tips, tricks and recepies from our chefs Johnson.
           </p>
         </div>
-        <button class="btn nav__btn subscribe__btn">Subscribe</button>
+        <button class="btn nav__btn subscribe__btn">SUBSCRIBE</button>
       </div>
     </section>
     <section class="section section--bg-grey">
@@ -171,28 +169,45 @@
     </section>
     <footer class="footer section section--bg-green">
       <div class="section__container section__container--footer">
-        <picture class="footer__section__picture">
-          <source />
-          <img
-            class="footer__section__picture__img"
-            src="./assets/logo-vertical.svg"
-            alt="Black Olives logo"
-          />
-        </picture>
+        <div class="footer__logo">
+          <picture class="footer__section__picture">
+            <source />
+            <img
+              class="footer__section__picture__img"
+              src="./assets/logo-vertical.svg"
+              alt="Black Olives logo"
+            />
+          </picture>
+          <p class="address footer__address">
+            16 Oxford Street<br />
+            W1C 2DT London<br />
+            United Kingdom
+          </p>
+        </div>
+
         <div class="footer__section--details">
-          <button class="nav__btn nav__btn--footer">Book a table</button>
           <nav class="nav__footer">
             <ul class="footer__ul">
-              <li class="nav__link"><a href="#home">Home</a></li>
-              <li class="nav__link"><a href="#about-us">About us</a></li>
-              <li class="nav__link"><a href="#menu">Menu</a></li>
-              <li class="nav__link"><a href="#our-chef">Our chef</a></li>
-              <li class="nav__link"><a href="#location">Location</a></li>
+              <li class="nav__link nav__link--footer">
+                <a href="#home">Home</a>
+              </li>
+              <li class="nav__link nav__link--footer">
+                <a href="#about-us">About us</a>
+              </li>
+              <li class="nav__link nav__link--footer">
+                <a href="#menu">Menu</a>
+              </li>
+              <li class="nav__link nav__link--footer">
+                <a href="#our-chef">Our chef</a>
+              </li>
+              <li class="nav__link nav__link--footer">
+                <a href="#location">Location</a>
+              </li>
             </ul>
           </nav>
-          <p class="address footer__address">
-            16 Oxford Street, London W1C 2DT, United Kingdom
-          </p>
+          <a href="book-table.html" target="_blank"
+            ><button class="nav__btn nav__btn--footer">BOOK A TABLE</button></a
+          >
         </div>
       </div>
     </footer>
