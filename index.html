@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Black Olives mediteranian restaurant and bar in London."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <title>Black Olives</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
@@ -18,19 +23,23 @@
         />
 
         <button id="menu-button" class="header__btn__menu">
-          <img src="./assets/menu.svg" alt="" />
+          <img src="./assets/menu.svg" alt="cross button" />
         </button>
       </div>
       <nav class="header__nav">
         <ul>
           <li class="nav__link"><a href="#home">Home</a></li>
           <li class="nav__link"><a href="#about-us">About us</a></li>
-          <li class="nav__link"><a href="#menu">Menu</a></li>
+          <li class="nav__link">
+            <a download href="./assets/Current-menu.pdf" target="_blank"
+              >Menu</a
+            >
+          </li>
           <li class="nav__link"><a href="#our-chef">Our chef</a></li>
           <li class="nav__link"><a href="#location">Location</a></li>
           <li class="nav__link">
             <a href="book-table.html" target="_blank"
-              ><button class="nav__btn">BOOK A TABLE</button></a
+              ><button class="nav__btn" role="button">BOOK A TABLE</button></a
             >
           </li>
         </ul>
@@ -40,7 +49,7 @@
           <source />
           <img
             class="header__img"
-            src="./assets/header-bg.jpg"
+            src="./assets/header-bg.webp"
             alt="beautifully served fish on a plate"
           />
         </picture>
@@ -50,7 +59,7 @@
       <div class="section__container">
         <img
           class="section__img img__about-us"
-          src="./assets/olive-tree.jpg"
+          src="./assets/olive-tree.webp"
           alt="olive tree"
         />
         <div>
@@ -88,7 +97,7 @@
         </div>
         <img
           class="section__img"
-          src="./assets/chef.jpg"
+          src="./assets/chef2.webp"
           alt="chef Johson Oshimota"
         />
       </div>
@@ -109,7 +118,7 @@
       <div class="section__container section_container_facilities">
         <img
           class="section__img section__img--dining"
-          src="./assets/dining.jpg"
+          src="./assets/dining.webp"
           alt="restaurant room"
         />
         <div>
@@ -130,7 +139,7 @@
         </div>
         <img
           class="section__img section__img--dining"
-          src="./assets/bar.jpg"
+          src="./assets/bar.webp"
           alt="cosy bar"
         />
       </div>
@@ -153,14 +162,18 @@
           </p>
         </div>
         <!-- <img class="section__img" src="./assets/Map.png" alt="map of Black Olives location"> -->
+
         <iframe
+          title="map of London"
           class="section__img section__location__img"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2133.6731873207877!2d-0.1336812238541922!3d51.5165235718154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2d16bba81d%3A0x514513246b550de1!2s16%20Oxford%20St%2C%20London%20EC1V%202NX%2C%20UK!5e1!3m2!1sen!2spl!4v1754053948763!5m2!1sen!2spl"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-0.14546155929565432%2C51.51442639098151%2C-0.14192104339599612%2C51.51572166073411&amp;layer=mapnik&amp;marker=51.51507403046184%2C-0.1436913013458252"
+          style="border: 1px solid black"
+        ></iframe
+        ><br /><small
+          ><a
+            href="https://www.openstreetmap.org/?mlat=51.515074&amp;mlon=-0.143691#map=19/51.515074/-0.143691"
+          ></a
+        ></small>
       </div>
     </section>
     <section class="section section__contact">
@@ -214,7 +227,9 @@
             </ul>
           </nav>
           <a class="footer__btn__link" href="book-table.html" target="_blank"
-            ><button class="nav__btn nav__btn--footer">BOOK A TABLE</button></a
+            ><button class="nav__btn nav__btn--footer" role="button">
+              BOOK A TABLE
+            </button></a
           >
           <p class="foot-note">
             All rights reserved Black Olives 2025 / Design and development
