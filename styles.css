@@ -435,7 +435,7 @@ a {
     grid-area: navi;
     display: flex;
     width: auto;
-    height: auto;
+    height: 100%;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -453,6 +453,7 @@ a {
     grid-template-areas:
       "logo img"
       "navi img";
+    overflow: hidden;
   }
 
   .header__logo {
@@ -483,11 +484,11 @@ a {
   }
 
   .section__contact__title {
-    font-size: 4vw;
+    font-size: 2.5vw;
   }
 
   .section__contact__email {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
   .form__olive-branch {
