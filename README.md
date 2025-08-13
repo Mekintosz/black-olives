@@ -1,6 +1,6 @@
 # Black Olives — Restaurant Landing Page
 
-https://mekintosz.github.io/black-olives/
+## (Link to live page)[https://mekintosz.github.io/black-olives/]
 
 I built Black Olives as a fully responsive, single-page restaurant website to showcase my ability to design and develop a polished front-end experience from scratch. The goal was to combine strong visual appeal with functional, user-friendly features.
 
