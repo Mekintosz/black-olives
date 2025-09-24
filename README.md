@@ -1,4 +1,4 @@
-#Black Olives — Restaurant Landing Page
+# Black Olives — Restaurant Landing Page
 
 https://mekintosz.github.io/black-olives/
 

@@ -1,0 +1,24 @@
+{
+  "name": "black-olives",
+  "version": "1.0.0",
+  "description": "https://mekintosz.github.io/black-olives/",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mekintosz/black-olives.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mekintosz/black-olives/issues"
+  },
+  "homepage": "https://github.com/Mekintosz/black-olives#readme",
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}

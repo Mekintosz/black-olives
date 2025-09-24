@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Black Olives Mediterranean restaurant and bar in London."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Black Olives</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header id="home" class="header">
+      <div class="header__group">
+        <img
+          class="header__logo logo--horizontal"
+          src="./assets/logo-horizontal.svg"
+          alt="logo Black Olives, two black olives silhouette"
+        />
+
+        <button
+          id="menu-button"
+          class="header__btn__menu"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <img src="./assets/menu.svg" alt="" />
+        </button>
+      </div>
+      <nav class="header__nav" id="primary-navigation">
+        <ul>
+          <li class="nav__link"><a href="#home">Home</a></li>
+          <li class="nav__link"><a href="#about-us">About us</a></li>
+          <li class="nav__link">
+            <a href="./assets/Current-menu.pdf" target="_blank" rel="noopener"
+              >Menu</a
+            >
+          </li>
+          <li class="nav__link"><a href="#our-chef">Our chef</a></li>
+          <li class="nav__link"><a href="#location">Location</a></li>
+          <li class="nav__link">
+            <a href="book-table.html" target="_blank" rel="noopener">
+              <button class="nav__btn" role="button">BOOK A TABLE</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__img__container">
+        <img
+          class="header__img"
+          src="./assets/header-bg.webp"
+          alt="beautifully served fish on a plate"
+        />
+      </div>
+    </header>
+    <section id="about-us" class="section about-us">
+      <div class="section__container">
+        <img
+          class="section__img img__about-us"
+          src="./assets/olive-tree.webp"
+          alt="olive tree"
+          loading="lazy"
+        />
+        <div>
+          <h2 class="section__title">About Black Olives</h2>
+          <p class="section__about--p">
+            Each region in Greece – in fact, each household – has its variation
+            on dolmades, whether it's the classic vine leaf parcel, or hollowed
+            out vegetables such as tomatoes, peppers and courgettes, stuffed and
+            baked in the oven. The stuffing often consists of minced meat with
+            long-grain rice, or vegetarian versions boast rice flavoured with
+            heady combinations of herbs like thyme, dill, fennel and oregano.
+            Pine nuts can also be used. Variations on moussaka are found
+            throughout the Mediterranean and the Balkans, but the iconic Greek
+            oven-bake is based on layers of sautéed aubergine, minced lamb,
+            fried puréed tomato, onion, garlic and spices like cinnamon and
+            allspice, a bit of potato, then a final creamy topping of béchamel
+            sauce and cheese.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="our-chef" class="section section--bg-grey">
+      <div class="section__container chef-container">
+        <div>
+          <h2 class="section__title">Chef Johson Oshimota</h2>
+          <p class="p_with-background">
+            Is best known from his appearances on Steel Chef. His food
+            presentation skills are exemplary and though he was trained in
+            traditional sushi preparation and Kaiseki cuisine he has been
+            strongly influenced by Western cooking styles.  His Morimoto
+            restaurant has multiple locations around the world. His books
+            include Japanese Home Cooking and Morimoto: The New Art of Japanese
+            Cooking.
+          </p>
+        </div>
+        <img
+          class="section__img"
+          src="./assets/chef2.webp"
+          alt="chef Johson Oshimota"
+          loading="lazy"
+        />
+      </div>
+    </section>
+    <section class="section section--bg-green">
+      <div class="section__container section__subscribe__container">
+        <div>
+          <h2 class="section__title">Newsletter</h2>
+          <p>
+            Subscribe to our newsletter to keep up to date with special offers,
+            tips, tricks and recepies from our chefs Johnson.
+          </p>
+        </div>
+        <button class="btn nav__btn subscribe__btn">SUBSCRIBE</button>
+      </div>
+    </section>
+    <section class="section section--bg-grey">
+      <div class="section__container section_container_facilities">
+        <img
+          class="section__img section__img--dining"
+          src="./assets/dining.webp"
+          alt="restaurant room"
+          loading="lazy"
+        />
+        <div>
+          <h3 class="section__title section__title--smaller">Dining room</h3>
+          <p>
+            The dining room has many seats and beautiful wooden tables. All the
+            tables can be covered with a white cloth. Our waiting staff is
+            always polite and fast on its feet.
+          </p>
+        </div>
+        <div>
+          <h3 class="section__title section__title--smaller">The bar</h3>
+          <p>
+            The bar is full of delicious beers and wines. We have sparkling
+            champagne and smooth rice vodka in stock. Delightful cocktails will
+            make you happy.
+          </p>
+        </div>
+        <img
+          class="section__img section__img--dining"
+          src="./assets/bar.webp"
+          alt="cosy bar"
+          loading="lazy"
+        />
+      </div>
+    </section>
+    <section id="location" class="section section--bg-green">
+      <div class="section__container">
+        <div>
+          <h3 class="section__title section__title--smaler">
+            Directions and contact
+          </h3>
+          <p>
+            16 Oxford Street<br />
+            W1C 2DT London<br />
+            United Kingdom
+          </p>
+          <p>
+            Opening hours:<br />
+            Tuesday to Friday 9:00 - 22:00<br />
+            Saturday and Sunday 12:00 - 24:00
+          </p>
+        </div>
+        <!-- <img class="section__img" src="./assets/Map.png" alt="map of Black Olives location"> -->
+
+        <iframe
+          title="Map of Black Olives location in London"
+          class="section__img section__location__img"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-0.14546155929565432%2C51.51442639098151%2C-0.14192104339599612%2C51.51572166073411&amp;layer=mapnik&amp;marker=51.51507403046184%2C-0.1436913013458252"
+          style="border: 1px solid black"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <section class="section section__contact">
+      <div class="section__container section__contact__container">
+        <div>
+          <p class="section__contact__title">Contact us at:</p>
+          <p class="section__contact__email">blackolives@contact.com</p>
+        </div>
+        <img
+          class="section_contact_img"
+          src="./assets/two-olives-background.svg"
+          alt="two black olives"
+        />
+      </div>
+    </section>
+    <footer class="footer section section--bg-green">
+      <div class="section__container section__container--footer">
+        <div class="footer__logo">
+          <picture class="footer__section__picture">
+            <img
+              class="footer__section__picture__img"
+              src="./assets/logo-vertical.svg"
+              alt="Black Olives logo"
+              loading="lazy"
+            />
+          </picture>
+          <p class="address footer__address">
+            16 Oxford Street<br />
+            W1C 2DT London<br />
+            United Kingdom
+          </p>
+        </div>
+        <div class="footer__section--details">
+          <nav class="nav__footer">
+            <ul class="footer__ul">
+              <li class="nav__link nav__link--footer">
+                <a href="#home">Home</a>
+              </li>
+              <li class="nav__link nav__link--footer">
+                <a href="#about-us">About us</a>
+              </li>
+              <li class="nav__link nav__link--footer">
+                <a href="#our-chef">Our chef</a>
+              </li>
+              <li class="nav__link nav__link--footer">
+                <a href="#location">Location</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="footer__btn__link" href="book-table.html" target="_blank"
+            ><button class="nav__btn nav__btn--footer" role="button">
+              BOOK A TABLE
+            </button></a
+          >
+          <p class="foot-note">
+            All rights reserved Black Olives 2025 / Design and development
+            Michał Łazicki
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
