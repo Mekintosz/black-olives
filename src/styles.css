@@ -18,7 +18,7 @@
   --title-font-size: 2.5rem;
   --title-font-size-smaller: 2.2rem;
   --medium-font-weight: 400;
-  --shadow-item: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --shadow-item: 4px 4px 19px -3px rgba(53, 58, 48, 1);
 }
 
 body {
@@ -118,31 +118,46 @@ a {
 .nav__link {
   font-size: 1.4rem;
   margin-bottom: 1.2em;
+  transition: scale 0.6s;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  scale: 1.125;
+}
+
+.nav__link.btn:hover {
+  scale: 1;
 }
 
 .nav__btn {
   font-family: "Libre Caslon Text", serif;
+  letter-spacing: 1.2;
   font-size: 1rem;
-  padding: 0.3rem 2.6rem;
+  padding: 0.6rem 2.6rem;
   margin-bottom: 2.4rem;
+  border-radius: 8px;
   background-color: var(--primary-yellow);
+}
+
+.nav__btn:hover {
+  box-shadow: 5px 5px 9px -2px rgba(53, 58, 48, 1);
 }
 
 .header__img__container {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  position: relative;
 }
 
 .header__img {
-  height: 90vh;
-  left: 50%;
-  margin-left: -70vh;
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .section {
+  padding: 1.5%;
   width: 100%;
   background-color: var(--bg-yellow);
 }
@@ -173,7 +188,7 @@ a {
 }
 
 .about-us {
-  background-image: url(./assets/olive-branch.svg);
+  background-image: url(./assets/olive-branch.svg) no-repeat;
 }
 
 .section__contact__email {
@@ -202,6 +217,7 @@ a {
   flex-shrink: 0;
   margin: 0 -1rem;
   box-shadow: var(--shadow-item);
+  border-radius: 8px;
 }
 
 .section__img--no-padding {
@@ -217,10 +233,9 @@ a {
 }
 
 .footer__ul {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  column-gap: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
 }
 
 .nav__link--footer {
@@ -232,13 +247,15 @@ a {
   margin: 2rem auto;
 }
 
-.footer__section__picture {
-  height: 30vh;
-  place-self: center;
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer__section__picture__img {
-  height: 100%;
+.footer__section__img {
+  max-height: 32vh;
+  opacity: 76%;
 }
 
 .footer__address {
@@ -248,7 +265,11 @@ a {
 }
 
 .section__subscribe__container {
+  margin: 2rem;
   gap: 2rem;
+  background-color: rgb(253, 234, 189);
+  border-radius: 18px;
+  box-shadow: var(--shadow-item);
 }
 
 .section__img--dining {
@@ -292,7 +313,7 @@ a {
 .foot-note {
   margin: 0 auto;
   padding: 0;
-  font-size: 1rem;
+  font-size: 0.7rem;
   text-align: center;
 }
 
@@ -304,18 +325,35 @@ a {
   background-origin: content-box;
 }
 
-.p_with-background::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%; /* positions image to the right edge so it overflows */
-  /* transform: translateY(-50%); */
+.section_container_facilities {
+  background-image: url(./assets/olive.png);
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
-  background: url("./assets/knife.webp") no-repeat;
-  z-index: 1;
+.about-us {
+  background-image: url(./assets/olive-branch.svg);
+  background-origin: content-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.buttonandthanklyou {
+  text-align: justify;
+  max-width: 360px;
+}
+
+.foot-thank {
+  font-size: 1.1rem;
 }
 
 @media (min-width: 600px) {
+  .section {
+    padding: 3%;
+  }
+
   .section__subscribe__container {
     flex-direction: row;
     align-items: center;
@@ -324,7 +362,7 @@ a {
   .subscribe__btn {
     margin: 0;
     text-align: center;
-    min-width: 30%;
+    min-width: 35%;
   }
 
   .section__img--dining {
@@ -337,56 +375,32 @@ a {
 
   .section__container--footer {
     flex-direction: row;
+    gap: 3rem;
+    align-items: stretch;
     justify-content: space-between;
-    align-items: center;
-    height: 30vh;
-    overflow: hidden;
   }
 
-  .footer__section__picture {
-    width: 20%;
-  }
-
-  .footer__section__picture__img {
-    width: 100%;
-  }
-
-  .footer__section--details {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
+  .footer__logo {
+    flex-direction: row;
+    height: 200px;
   }
 
   .footer__address {
     padding: 0;
   }
 
-  .nav__btn--footer {
-    margin: 0;
-  }
-
   .footer__btn__link {
     display: flex;
     justify-content: center;
+    margin-top: auto;
   }
 
   .section_contact_img {
     height: 70vh;
   }
 
-  .footer__logo {
-    display: flex;
-  }
-
-  .footer__section__picture {
-    display: flex;
+  .footer__section__img {
     height: 100%;
-    width: 30%;
-    align-items: end;
-  }
-  .footer__section__picture__img {
-    align-items: end;
   }
 
   .footer__address {
@@ -394,18 +408,59 @@ a {
     margin: 0 0 0 0.4rem;
     text-align: start;
     align-self: end;
+    width: 120px;
   }
 
   .nav__btn--footer {
     max-width: 300px;
     align-self: center;
+    margin: 0 auto;
+  }
+
+  .footer__ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    place-items: end;
+    height: 100%;
+  }
+
+  .chef-container {
+    background-size: 35%;
+    background-position: center top;
+  }
+  .nav__link--footer {
+    padding: 0;
+    margin: 0;
+  }
+
+  .buttonandthanklyou {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .foot-note {
+    letter-spacing: 3px;
   }
 }
 
 @media (min-width: 1000px) {
+  .facilities-reverse {
+  }
+  .chef-container {
+    background-size: 40%;
+    background-position: center left;
+  }
+
+  .section__container {
+    max-width: 1440px;
+  }
+
   .header__logo {
     max-width: 340px;
   }
+
   .section__container {
     font-size: 1.6rem;
     padding: 6rem 4rem;
@@ -413,6 +468,9 @@ a {
     gap: 4rem;
     justify-content: space-between;
     align-items: center;
+  }
+  .section__container--footer {
+    align-items: stretch;
   }
 
   .section__img {
@@ -434,7 +492,8 @@ a {
   }
 
   .section__subscribe__container {
-    flex-direction: column;
+    margin: 4rem auto;
+    width: clamp(800px, 60%, 1100px);
   }
 
   .section_container_facilities {
@@ -446,19 +505,12 @@ a {
     width: 100%;
   }
 
-  .header__img {
-    height: 100vh;
-    overflow: hidden;
-    object-fit: cover;
-    scale: 130%;
-  }
-
   .header__nav {
     grid-area: navi;
     display: flex;
     width: auto;
     height: 100%;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     text-align: center;
     font-size: var(--menu-font-size);
@@ -487,24 +539,6 @@ a {
     display: none;
   }
 
-  .section__container {
-    max-width: 1440px;
-  }
-
-  .section__container--footer {
-    width: 100%;
-    height: auto;
-    align-content: end;
-  }
-
-  .footer__section--details {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-  }
-
   .section__contact__title {
     font-size: 2.5vw;
   }
@@ -521,10 +555,5 @@ a {
     width: 100%;
     height: auto;
     z-index: -1;
-  }
-
-  .nav__link--footer {
-    padding: 0;
-    margin: 0;
   }
 }
