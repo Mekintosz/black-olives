@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><meta name=description content="Black Olives Mediterranean restaurant and bar in London."><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel=stylesheet><title>Black Olives</title><link rel=stylesheet href=black-olives.670b6b8b.css><script src=black-olives.a2433d86.js defer></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><meta name=description content="Black Olives Mediterranean restaurant and bar in London."><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel=stylesheet><title>Black Olives</title><link rel=stylesheet href=black-olives.0076d0c8.css><script type=module src=black-olives.bdc17e6f.js></script><body>
     <header id=home class=header>
       <div class=header__group>
         <img class="header__logo logo--horizontal" src=logo-horizontal.8f1043b9.svg alt="logo Black Olives, two black olives silhouette">
@@ -68,7 +68,7 @@
     </section>
     <section class="section section--bg-green">
       <div class="section__container section__subscribe__container">
-        <div>
+        <div class=subscribe__text>
           <h2 class=section__title>Newsletter</h2>
           <p>
             Receive exclusive recipes and special offers directly from our
@@ -76,7 +76,19 @@
             the Mediterranean to your table.
           </p>
         </div>
-        <button class="btn nav__btn subscribe__btn">SUBSCRIBE</button>
+        <form class=subscribe-form action=# method=post>
+          <div class=input-container>
+            <label for=subscribe-name>Name</label>
+            <input id=subscribe-name name=subscribe-name autocomplete=name>
+          </div>
+          <div class=input-container>
+            <label for=subscribe-email>Email</label>
+            <input type=email id=subscribe-email name=subscribe-email autocomplete=email>
+          </div>
+          <button class="btn nav__btn subscribe__btn">
+            SUBSCRIBE
+          </button>
+        </form>
       </div>
     </section>
     <section class="section section--bg-grey">
