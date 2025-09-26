@@ -24,6 +24,10 @@ This project gave me a chance to combine design skills (consistent color palette
 
 <img width="1903" height="3747" alt="screencapture-mekintosz-github-io-black-olives-2025-07-31-12_01_46" src="https://github.com/user-attachments/assets/f10bb065-43cf-47b6-b881-799b337a0d03" />
 
+## Project documentation
+
+See: [`docs/BLACK_OLIVES_DOCUMENTATION.md`](docs/BLACK_OLIVES_DOCUMENTATION.md) for a comprehensive overview: features, stack, architecture, development and deployment details, design system, challenges, and rationale for tech choices.
+
 Do zrobienia: poprawić leyout bookin page, add smoth opening to nav in mobile mode, add interactive nav button, add backend for booking page and subscription (at least mock back end)
 
 Photo credits:
