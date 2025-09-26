@@ -15,7 +15,7 @@
     />
     <title>Black Olives</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="./index.js"></script>
   </head>
 
   <body>
@@ -114,7 +114,7 @@
     </section>
     <section class="section section--bg-green">
       <div class="section__container section__subscribe__container">
-        <div>
+        <div class="subscribe__text">
           <h2 class="section__title">Newsletter</h2>
           <p>
             Receive exclusive recipes and special offers directly from our
@@ -122,7 +122,29 @@
             the Mediterranean to your table.
           </p>
         </div>
-        <button class="btn nav__btn subscribe__btn">SUBSCRIBE</button>
+        <form class="subscribe-form" action="#" method="post">
+          <div class="input-container">
+            <label for="subscribe-name">Name</label>
+            <input
+              type="text"
+              id="subscribe-name"
+              name="subscribe-name"
+              autocomplete="name"
+            />
+          </div>
+          <div class="input-container">
+            <label for="subscribe-email">Email</label>
+            <input
+              type="email"
+              id="subscribe-email"
+              name="subscribe-email"
+              autocomplete="email"
+            />
+          </div>
+          <button class="btn nav__btn subscribe__btn" type="submit">
+            SUBSCRIBE
+          </button>
+        </form>
       </div>
     </section>
     <section class="section section--bg-grey">

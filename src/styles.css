@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-green: rgba(102, 148, 74, 0.61);
+  --primary-green: rgb(161, 189, 144);
   --primary-yellow: rgb(216, 172, 72);
   --light-grey: rgb(233, 233, 233);
   --olive-black: rgb(16, 23, 6);
@@ -82,11 +82,17 @@ a {
   flex-direction: column;
   background-color: var(--primary-green);
   height: 100vh;
+  position: relative; /* enable nav overlay positioning */
 }
 
 .header__group {
   display: flex;
   justify-content: space-between;
+}
+
+/* Ensure consistent navbar height for overlay offset */
+.header__group {
+  min-height: 4.5rem;
 }
 
 .header__btn__menu {
@@ -102,17 +108,42 @@ a {
   max-width: 280px;
 }
 
+/* Smooth mobile nav reveal/retract over the hero image */
 .header__nav {
-  display: none;
+  position: absolute;
+  top: 5.2rem; /* retract from bottom of navbar */
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgb(161, 189, 144); /* higher opacity overlay */
+  padding-top: 2.2rem; /* keep consistent top spacing in both states */
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+  pointer-events: none;
 }
 
 .header__nav.active {
-  margin-top: 2.4rem;
-  display: flex;
-  justify-content: center;
+  opacity: 1;
+  transform: translateY(0);
   text-align: center;
   font-size: var(--menu-font-size);
   font-weight: var(--medium-font-weight);
+  pointer-events: auto;
+}
+
+/* Keep list layout stable to avoid horizontal shift on close */
+.header__nav > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Prevent link scale animation from kicking in while closing */
+.header__nav:not(.active) .nav__link {
+  transition: none;
 }
 
 .nav__link {
@@ -154,6 +185,11 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
 
 .section {
@@ -272,6 +308,61 @@ a {
   box-shadow: var(--shadow-item);
 }
 
+/* Newsletter subscribe form */
+.subscribe-form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.subscribe-form .input-container > input {
+  width: 100%;
+}
+
+/* Make subscribe labels consistent with booking form */
+.subscribe-form .input-container > label {
+  margin-bottom: 0.2rem;
+}
+
+/* Compact subscribe field sizing */
+.subscribe-form .input-container > input {
+  padding: 0.35rem 0.5rem;
+  font-size: 0.9rem;
+}
+.subscribe-form .input-container > label {
+  font-size: 0.9rem;
+}
+
+/* Extra separation between fields and the subscribe button */
+.subscribe-form .subscribe__btn {
+  margin-top: 1rem;
+}
+
+/* Shared input styling across the site */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--olive-black);
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-yellow);
+  box-shadow: 0 0 0 2px rgba(216, 172, 72, 0.2);
+}
+
+/* Ensure booking form inputs expand full width in single-column sections */
+.booking-form .input-container > input,
+.booking-form .input-container > select,
+.booking-form .input-container > textarea {
+  width: 100%;
+}
+
 .section__img--dining {
   margin-bottom: 2rem;
 }
@@ -287,15 +378,28 @@ a {
   flex-direction: column;
 }
 
+/* Submit button spacing */
+.booking-form button[type="submit"],
+.booking-form .submit-btn {
+  margin-top: 1.5rem;
+}
+
 .input-container {
-  margin: 1rem;
   display: grid;
+  min-width: 0; /* allow grid items to shrink within 1fr tracks */
+}
+
+/* Consistent vertical spacing for standalone stacked inputs */
+.booking-form .input-container {
+  margin-bottom: 1rem;
 }
 
 .section__form {
   display: flex;
   align-items: end;
   height: 100%;
+  background-image: url(./assets/olive-branch.svg);
+  background-size: cover;
 }
 
 .header__form {
@@ -348,8 +452,55 @@ a {
 .foot-thank {
   font-size: 1.1rem;
 }
+.form__container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem; /* use grid gap instead of margins on children */
+}
+
+/* Remove extra margins inside the grid since we use gap */
+.form__container-2 .input-container {
+  margin: 0;
+}
+
+/* Ensure form fields fill their cell and can shrink without pushing tracks */
+/* Consistent label spacing across all form inputs */
+.booking-form .input-container > label,
+.form__container-2 .input-container > label {
+  margin-bottom: 0.5rem;
+}
+.form__container-2 .input-container > input,
+.form__container-2 .input-container > select,
+.form__container-2 .input-container > datalist,
+.form__container-2 .input-container > input[list] {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Visual division between contact details and booking details */
+.booking-form > div:first-of-type {
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--olive-black);
+}
+
+input {
+  height: 2.1em;
+}
+
+nav__btn.submit-btn {
+  margin-top: 2rem;
+}
 
 @media (min-width: 600px) {
+  .subscribe__text {
+    max-width: 52%;
+  }
+  /* Tablet: increase submit spacing */
+  .booking-form button[type="submit"],
+  .booking-form .submit-btn {
+    margin-top: 2rem;
+  }
   .section {
     padding: 3%;
   }
@@ -357,6 +508,7 @@ a {
   .section__subscribe__container {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 
   .subscribe__btn {
@@ -446,8 +598,10 @@ a {
 }
 
 @media (min-width: 1000px) {
-  .facilities-reverse {
+  .subscribe-form {
+    width: clamp(240px, 60%, 420px);
   }
+
   .chef-container {
     background-size: 40%;
     background-position: center left;
@@ -514,6 +668,14 @@ a {
     justify-content: center;
     text-align: center;
     font-size: var(--menu-font-size);
+    /* reset animated states on desktop */
+    position: static;
+    z-index: auto;
+    background: transparent;
+    padding-top: 0;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
   }
 
   .header__img__container {
@@ -555,5 +717,10 @@ a {
     width: 100%;
     height: auto;
     z-index: -1;
+  }
+  /* Desktop: increase submit spacing */
+  .booking-form button[type="submit"],
+  .booking-form .submit-btn {
+    margin-top: 3rem;
   }
 }

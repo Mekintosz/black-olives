@@ -1,7 +1,9 @@
-const menuButton = document.getElementById("menu-button");
-const navigation = document.querySelector(".header__nav");
+export function initNav() {
+  const menuButton = document.getElementById("menu-button");
+  const navigation = document.querySelector(".header__nav");
 
-if (menuButton && navigation) {
+  if (!menuButton || !navigation) return;
+
   const navLinks = navigation.querySelectorAll("a");
 
   const setExpanded = (expanded) => {
@@ -16,6 +18,7 @@ if (menuButton && navigation) {
     const isOpen = navigation.classList.toggle("active");
     setExpanded(isOpen);
     document.body.style.overflow = isOpen ? "hidden" : "";
+    document.body.classList.toggle("menu-open", isOpen);
   };
 
   menuButton.addEventListener("click", toggleMenu);
@@ -26,6 +29,7 @@ if (menuButton && navigation) {
         navigation.classList.remove("active");
         setExpanded(false);
         document.body.style.overflow = "";
+        document.body.classList.remove("menu-open");
       }
     });
   });
@@ -35,6 +39,7 @@ if (menuButton && navigation) {
       navigation.classList.remove("active");
       setExpanded(false);
       document.body.style.overflow = "";
+      document.body.classList.remove("menu-open");
     }
   });
 }

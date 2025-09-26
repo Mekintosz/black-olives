@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book a Table – Black Olives</title>
+    <title>Book a Table - Black Olives</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,24 +11,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="./index.js"></script>
   </head>
 
   <body>
     <header id="home" class="header">
-      <!-- <img
-        class="header__bg__img"
-        src="./assets/olive-branch.svg"
-        alt="olive tree branch"
-      /> -->
       <div class="header__group">
-        <picture>
-          <img
-            class="header__logo logo--horizontal"
-            src="./assets/logo-horizontal.svg"
-            alt="logo Black Olives, two black olives silhouette"
-          />
-        </picture>
+        <img
+          class="header__logo logo--horizontal"
+          src="./assets/logo-horizontal.svg"
+          alt="logo Black Olives, two black olives silhouette"
+        />
         <button
           id="menu-button"
           class="header__btn__menu"
@@ -48,11 +41,6 @@
         </ul>
       </nav>
       <div class="header__img__container header__form">
-        <img
-          class="form__olive-branch"
-          src="./assets/olive-branch.svg"
-          alt=""
-        />
         <section class="section__form">
           <form class="booking-form" action="">
             <p>
@@ -121,7 +109,11 @@
                 />
               </div>
             </div>
-            <button class="nav__btn nav__btn--footer" id="submit" type="submit">
+            <button
+              class="nav__btn nav__btn--footer submit-btn"
+              id="submit"
+              type="submit"
+            >
               Submit
             </button>
           </form>
